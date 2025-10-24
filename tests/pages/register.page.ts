@@ -1,11 +1,12 @@
-/*
- * register.page.ts
+/**
  * Esta classe representa a página de registro (Register) da aplicação Parabank.
  * Ela encapsula os seletores e os métodos de interação específicos dessa página,
  * segundo o padrão Page Object Model (POM).
  *
  * O Objetivo do POM é melhorar a manutenção e a legibilidade dos testes automatizados,
  * separando a lógica de interação (o "como") com a interface do usuário da lógica dos testes (o "o quê").
+ *
+ * Será utilizada no MVP para o "PASSO 1: REGISTRO (CREATE)".
  */
 
 // Importa o tipo 'Page'  e o 'Locator' do Playwright
