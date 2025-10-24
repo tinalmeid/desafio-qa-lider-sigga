@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESnext", //Versão JS será gerada
+    "module": "commonjs", //Define sistema de módulo pra Playwright
+    "moduleResolution": "node", //Como TS encontra módulos
+    "strict": true, // Check rigorosa do código
+    "esModuleInterop": true, // Permite compatibilidade entre ES e CommonJS
+    "allowSyntheticDefaultImports": true, // Permite importações padrão
+    "lib": ["ESNext", "DOM"], // Libs do TS
+    "types": ["@playwright/test"] // Tipagens do Playwright
+  },
+  "include": [
+    "tests/**/*.ts" //Arquivos TS incluídos
+  ],
+  "exclude": [
+    "node_modules" //Excluir node_modules
+  ]
+}

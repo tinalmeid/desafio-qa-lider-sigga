@@ -1,9 +1,16 @@
 {
   "name": "desafio-qa-lider-sigga",
   "version": "1.0.0",
-  "description": "",
+  "description": "MVP de testes automatizados utilizando Playwright para o desafio de QA Líder da Sigga.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "comment": "Scripts de execução dos testes com Playwright",
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "comment_debug": "Script para executar testes em modo debug",
+    "test:debug": "npx playwright test --debug",
+    "codegen": "npx playwright codegen  https://parabank.parasoft.com/"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
