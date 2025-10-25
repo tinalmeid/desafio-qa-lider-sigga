@@ -6,7 +6,7 @@
  * O Objetivo do POM é melhorar a manutenção e a legibilidade dos testes automatizados,
  * separando a lógica de interação (o "como") com a interface do usuário da lógica dos testes (o "o quê")
  *
- * Será utilizada no MVP para o "PASSO 2: LOGIN (READ)".
+ * Será utilizada no MVP para o "PASSO 4: LOGIN (READ)".
  */
 
 // Importa o tipo 'Page'  e o 'Locator' do Playwright
@@ -39,7 +39,7 @@ export class LoginPage {
    * URL base definida no arquivo de configuração 'playwright.config.ts'.
    */
   async goto() {
-    await this.page.goto("/");
+    await this.page.goto("./");
   }
 
   //@param username - Nome de usuário para login
@@ -62,7 +62,7 @@ export class LoginPage {
    * @param username - Nome de usuário para login
    * @param password - Senha para login
    */
-  async login(username: string, password: string) {
+  async loginAsUser(username: string, password: string) {
     await this.fillUsername(username);
     await this.fillPassword(password);
     await this.clickLogin();

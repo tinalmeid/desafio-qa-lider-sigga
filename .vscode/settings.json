@@ -1,0 +1,6 @@
+{
+  "sonarlint.connectedMode.project": {
+    "connectionId": "tinalmeid",
+    "projectKey": "tinalmeid_desafio-qa-lider-sigga"
+  }
+}

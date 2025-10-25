@@ -11,7 +11,7 @@ export default defineConfig({
   // Configurações globais para todos os testes.
   use: {
     // Define a URL base para os testes.
-    baseURL: "https://parabank.parasoft.com",
+    baseURL: "https://parabank.parasoft.com/parabank/",
     // Habilita a captura de rastreamento para depuração.
     trace: "on-first-retry",
   },

@@ -5,8 +5,8 @@
  */
 
 //Gera um usuário válido para o fluxo de registro
-const timestamp = Date.now();
-const uniqueUsername = `sigga_user_${timestamp}`;
+const randomId = Math.floor(10000 + Math.random() * 9000); // Gera um número aleatório de 5 dígitos
+const uniqueUsername = `siggauser${randomId}`;
 const defaultPassword = `SenhaSegura!23`;
 
 //Dados para o formulário de registro

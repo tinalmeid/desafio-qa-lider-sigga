@@ -5,7 +5,7 @@
  * O Objetivo do POM é melhorar a manutenção e a legibilidade dos testes automatizados,
  * separando a lógica de interação (o "como") com a interface do usuário da lógica dos testes (o "o quê")
  *
- * Será utilizada no MVP para o "PASSO 3: ATUALIZAR PERFIL (UPDATE)".
+ * Será utilizada no MVP para o "PASSO 2: ATUALIZAR PERFIL (UPDATE)".
  */
 
 // Importa o tipo 'Page'  e o 'Locator' do Playwright
@@ -17,6 +17,7 @@ export class UpdateProfilePage {
   readonly phoneInput: Locator; // Campo que será utilizado para o fluxo update do MVP
   readonly updateProfileButton: Locator;
   readonly successMessageTitle: Locator;
+  readonly firstNameLabel: Locator;
 
   /**
    * Construtor da classe UpdateProfilePage.
@@ -27,10 +28,11 @@ export class UpdateProfilePage {
 
     // Mapeamento dos seletores do formulário de atualização de perfil
     this.phoneInput = page.locator('input[id="customer.phoneNumber"]');
-    this.updateProfileButton = page.locator(
-      'input[type="submit"][value="Update Profile"]'
-    );
-    this.successMessageTitle = page.locator("h1.title");
+    this.updateProfileButton = page.getByRole("button", {
+      name: "UPDATE PROFILE",
+    });
+    this.successMessageTitle = page.getByText("Profile Updated");
+    this.firstNameLabel = page.getByText("First Name:", { exact: true });
   }
 
   //---Métodos de Interação da Página (Actions) ---
@@ -42,6 +44,7 @@ export class UpdateProfilePage {
   async updatePhoneNumber(newPhoneNumber: string) {
     await this.phoneInput.clear();
     await this.phoneInput.fill(newPhoneNumber);
+    await this.firstNameLabel.click();
     await this.updateProfileButton.click();
   }
 
@@ -50,6 +53,6 @@ export class UpdateProfilePage {
    * Valida (assert) se a atualização foi realizada com sucesso.
    */
   async getSuccessTitleText() {
-    return this.successMessageTitle.textContent();
+    return this.page.getByText("Profile Updated").textContent();
   }
 }

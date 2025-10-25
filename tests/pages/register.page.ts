@@ -46,7 +46,7 @@ export class RegisterPage {
     this.cityInput = page.locator('input[id="customer.address.city"]');
     this.stateInput = page.locator('input[id="customer.address.state"]');
     this.zipCodeInput = page.locator('input[id="customer.address.zipCode"]');
-    this.phoneInput = page.locator('input[id="customer.phone"]');
+    this.phoneInput = page.locator('input[id="customer.phoneNumber"]');
     this.ssnInput = page.locator('input[id="customer.ssn"]');
     this.usernameInput = page.locator('input[id="customer.username"]');
     this.passwordInput = page.locator('input[id="customer.password"]');
@@ -67,7 +67,7 @@ export class RegisterPage {
    * URL base no arquivo 'playwright.config.ts'.
    */
   async goto() {
-    await this.page.goto("/register.htm");
+    await this.page.goto("register.htm");
   }
 
   /**
