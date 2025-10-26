@@ -74,7 +74,7 @@ Executa o fluxo completo E2E completo [sigga-mvp.spec.ts](./tests/sigga-mvp.spec
 npm run test:headed
 ```
 
-### Modo "Headless" (CI)
+#### Modo "Headless" (CI)
 
 Este comando executa o teste em segundo plano **sem browser**, como em um servidor CI
 
