@@ -16,7 +16,7 @@ O objetivo é demonstrar uma arquitetura de testes robusta, escalável e de fác
 
 Antes da implementação técnica, foi elaborado um planejamento de testes. Neste, é detalhado a arquitetura, o escopo do MVP e a estratégia dos cenários mapeados para a automação do CRUD.
 
-**Consulte o Plano de Testes completo aqui: [PLANO_DE_TESTES.MD](./PLANO_DE_TESTES.MD)**
+**Consulte o Plano de Testes completo aqui: [PLANO_DE_TESTES.md](./PLANO_DE_TESTES.md)**
 
 ## 🛠️ Tecnologias Utilizadas
 
